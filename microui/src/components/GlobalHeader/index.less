@@ -1,0 +1,143 @@
+@import '~antd/lib/style/themes/default.less';
+
+.portal_header {
+  height: 64px;
+  padding: 0 12px 0 0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  position: relative;
+}
+
+:global {
+  .portal_ant-layout {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+.portal_logo {
+  height: 64px;
+  line-height: 58px;
+  vertical-align: top;
+  display: inline-block;
+  padding: 0 0 0 24px;
+  cursor: pointer;
+  font-size: 20px;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.portal_outSider {
+  width: 330px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  border-radius: 4px;
+  margin-top: 26px;
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+}
+
+.portal_scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 450px;
+  width: 350px;
+  background-color: #fff;
+  ::-webkit-scrollbar { display: none }
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.portal_list {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.portal_list h4 {
+  font-weight: 600;
+}
+
+.portal_list :hover {
+  cursor: pointer;
+  background-color: rgb(234, 254, 255);
+}
+
+.portal_empty {
+  width: 400px;
+  height: 300px;
+}
+
+.portal_menu {
+  margin-top: 20px;
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+}
+
+i.portal_trigger {
+  font-size: 20px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: all 0.3s, padding 0s;
+  padding: 0 24px;
+  &:hover {
+    background: @primary-1;
+  }
+}
+
+.portal_right {
+  float: right;
+  height: 100%;
+  width: 20%;
+  position: relative;
+  overflow: hidden;
+}
+
+.portal_left {
+  float: left;
+  height: 100%;
+  width:20%;
+  position: relative;
+  overflow: hidden;
+}
+
+.portal_mainmenu {
+  float: left;
+  height: 100%;
+  width:59%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: @screen-md) {
+  .portal_header {
+    :global(.ant-divider-vertical) {
+      vertical-align: unset;
+    }
+    .portal_name {
+      display: none;
+    }
+    i.portal_trigger {
+      padding: 0 12px;
+    }
+    .portal_logo {
+      padding-right: 12px;
+      position: relative;
+    }
+    .portal_right {
+      position: absolute;
+      right: 12px;
+      top: 0;
+      background: #fff;
+      .portal_account {
+        .portal_avatar {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
